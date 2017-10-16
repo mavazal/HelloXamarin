@@ -1,0 +1,16 @@
+﻿{
+  "knownAssemblies": [
+    { "name": "Prism" },
+    { "name": "Prism.Forms" },
+    { "name": "Prism.Unity.Forms" },
+    { "name": "Prism.Core" },
+
+    { "name": "HelloXamarin" },
+    { "name": "HelloXamarin.Views" },
+    { "name": "HelloXamarin.Views.Templates" },
+    { "name": "HelloXamarin.ViewModels" },
+    { "name": "HelloXamarin.Helpers" },
+    //{ "name": "HelloXamarin.Behaviors" },
+    //{ "name": "HelloXamarin.Controls" }
+  ]
+}
