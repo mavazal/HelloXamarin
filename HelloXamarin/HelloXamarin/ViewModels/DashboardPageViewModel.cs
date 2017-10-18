@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HelloXamarin.ViewModels
 {
-    class DashboardViewmodel
+    class DashboardPageViewModel
     {
     }
 }

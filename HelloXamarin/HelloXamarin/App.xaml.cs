@@ -1,38 +1,25 @@
-﻿using HelloXamarin.Views;
-
-using Xamarin.Forms;
+﻿using HelloXamarin.ViewModels;
+using HelloXamarin.Views;
+using Prism.Unity;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace HelloXamarin
 {
-    public partial class App : Application
+    public partial class App : PrismApplication
     {
-        public App()
+        public App(IPlatformInitializer initializer = null) : base(initializer) { }
+        
+        protected async override void OnInitialized()
         {
             InitializeComponent();
-
-            SetMainPage();
         }
 
-        public static void SetMainPage()
+        protected override void RegisterTypes()
         {
-            Current.MainPage = new TabbedPage
-            {
-                Children =
-                {
-                    new NavigationPage(new ItemsPage())
-                    {
-                        Title = "Browse",
-                        Icon = Device.OnPlatform("tab_feed.png",null,null)
-                    },
-                    new NavigationPage(new AboutPage())
-                    {
-                        Title = "About",
-                        Icon = Device.OnPlatform("tab_about.png",null,null)
-                    },
-                }
-            };
+            Container.RegisterTypeForNavigation<DashboardPage, DashboardPageViewModel>();
+
         }
+        
     }
 }

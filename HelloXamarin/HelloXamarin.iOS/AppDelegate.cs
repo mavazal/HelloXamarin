@@ -14,13 +14,14 @@ namespace HelloXamarin.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
             //LoadApplication(new App());
+            LoadApplication(new App(new iOSInitializer()));
 
-            LoadApplication(UXDivers.Gorilla.iOS.Player.CreateApplication(new UXDivers.Gorilla.Config("Good Gorilla")
-                        .RegisterAssembliesFromTypes<Prism.IActiveAware, Prism.PrismApplicationBase<App>, Prism.Unity.PrismApplication>()
-                        //.RegisterAssemblyFromType<CircleControl>()
-                        //.RegisterAssemblyFromType<CircleRenderer>()
-                        //.RegisterAssemblyFromType<BadgeControl>()
-    ));
+            //LoadApplication(UXDivers.Gorilla.iOS.Player.CreateApplication(new UXDivers.Gorilla.Config("Good Gorilla")
+            //            .RegisterAssembliesFromTypes<Prism.IActiveAware, Prism.PrismApplicationBase<App>, Prism.Unity.PrismApplication>()
+            //            //.RegisterAssemblyFromType<CircleControl>()
+            //            //.RegisterAssemblyFromType<CircleRenderer>()
+            //            //.RegisterAssemblyFromType<BadgeControl>()
+    //));
 
             return base.FinishedLaunching(app, options);
 		}
