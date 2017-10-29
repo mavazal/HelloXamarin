@@ -5,8 +5,24 @@
              x:Class="HelloXamarin.Views.DashboardPage"
              Title="Dashboard">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="buhhhh!!!!Hola caracolaaa:-)" />
-        </StackLayout>
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#DC5043" Rotation="50">
+                <Label Text="buhhhh!!!!Hola caracolaaa:-)" />
+            </StackLayout>
+            <StackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#FFCF46" Rotation="50">
+                <Label Text="buhhhh!!!!Hola caracolaaa:-)" />
+            </StackLayout>
+            <StackLayout Grid.Row="2" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#7CCDC7" Rotation="50">
+                <Label Text="Tururu" HorizontalTextAlignment="Center" FontSize="13" FontFamily="Droid Sans Mono"></Label>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
